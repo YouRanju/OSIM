@@ -1,0 +1,6 @@
+* { margin: 0; padding: 0;}
+body { position: relative; }
+#dd { height: 600px; background-color: coral;}
+#howMany { height: 200px; background-color: pink;}
+#zom { position: absolute; bottom:50px; left: 30px; width: 100px;}
+#run { position: absolute; bottom:50px; left: 90%; width: 100px;}
