@@ -4,18 +4,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/contentCss.css">
-<script src="js/timecheck.js"></script>
+<link rel="stylesheet" href="css/contentCss.css?ver=3">
+<script src="js/timecheck.js?ver=16"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
 	<div id = "dd">
-		<div id="countdown"></div>
+		현 재 시 간  | <span id="countdown"></span> <br>
+		다음 월요일 |  <%= session.getAttribute("thisMonth") %>월 <%= session.getAttribute("thisDate") %>일
 	</div>
+
 	<div id = "howMany">
 		<img src = "img/zom.png" id="zom">
 		<img src = "img/run.png" id="run">
 	</div>
-	
 </body>
 </html>

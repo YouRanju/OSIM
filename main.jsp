@@ -12,6 +12,7 @@
 		isMonday = "content.jsp";
 	}
 %>
+<jsp:include page="timeCheck.jsp" />
 
 <jsp:forward page="template.jsp">
 	<jsp:param value="<%=isMonday %>" name="CONTENTPAGE"/>

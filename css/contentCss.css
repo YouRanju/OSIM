@@ -1,6 +1,7 @@
 * { margin: 0; padding: 0;}
 body { position: relative; }
-#dd { height: 600px; background-color: coral;}
+#dd { height: 640px;
+	 background: linear-gradient(to top, #304A69, #203954, #19282D 20%, #060315 40%);}
 #howMany { height: 200px; background-color: pink;}
 #zom { position: absolute; bottom:50px; left: 30px; width: 100px;}
 #run { position: absolute; bottom:50px; left: 90%; width: 100px;}
