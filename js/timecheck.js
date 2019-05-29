@@ -1,13 +1,16 @@
 window.onload = init;
 var cnt = 0;
 var month, dad, day, hours, minutes, seconds;
+var today;
+var distance;
 var date;
 
 function init() {
 	element = document.getElementById("countdown");
 	endElement = document.getElementById("endTime");
 	run = document.getElementById("run");
-
+	distance = document.getElementById("distance");
+	
 	setPosition();
 	updateTimer();	
 	
@@ -25,20 +28,25 @@ function timeChecking() {
 	hours = date.getHours();
 	minutes = date.getMinutes();
 	seconds = date.getSeconds();
-	
+
+	today = date.getMilliseconds();
+
 	backgroundChange();
+	
+	distance.innerHTML = (distance.innerHTML.replace('KM', '') - today) + " KM";
 }
 
 function setPosition() {
 	timeChecking();
 	
-	if(day != 1) {
+	if(day != 1) {		
+		
 		day = day == 0 ? 6 : day-1;
 		
-		var OneDayleft = 100 - ((14.28 * day) + (14.28 / 24 * hours) + 
+		OneDayleft = 100 - ((14.28 * day) + (14.28 / 24 * hours) + 
 				(14.28 / 24 / 60 * minutes) + (14.28 / 24 / 60 / 60 * seconds));
 		
-		$('#run').animate({left: OneDayleft+"%"});
+		$('#run').animate({left: OneDayleft+"%"});	
 	} else {
 		var OneHourleft = ((3.75 * hours) + (3.75 / 60 * minutes) + (3.75 / 60 / 60 * seconds) );
 		$('#run').animate({left: OneHourleft+'%'});
@@ -50,9 +58,17 @@ function updateTimer(){
 	
 	timeChecking();
 
-	element.innerHTML = (month+1) + '월 ' + dd + '일 ' + week[day] + '요일 ' + (hours%12) + ' : ' + minutes + ' : ' + seconds;
+	element.innerHTML = (month+1) + '월 ' + dad + '일 ' + week[day] + '요일 ' + (hours%12) + ' : ' + minutes + ' : ' + seconds;
 	
 	if(day == 1 ) endTime();
+	
+	if(run.style.left.replace('%','') <= OneDayleft+20) {
+
+		dist = $('#run').css('left').replace('px', '') - $('#zom').css('left').replace('px', '');
+		
+		$('#distance').animate({left: ((dist/2)-distance.style.width.replace('px', ''))+'px'} );
+		$('#distance').fadeIn(100);
+	}
 }
 
 function endTime() {
@@ -70,8 +86,8 @@ function runLeft() {
 	if(day != 1) {
 		$('#run').animate({left:('-=0.002%')});
 		
-		if($('#run').css.left <= '30px') {
-			$('#run').css.left = '30px';
+		if($('#run').css.left <= '2%') {
+			$('#run').css.left = '2%';
 		}
 		
 	} else {
@@ -80,8 +96,7 @@ function runLeft() {
 		if($('#run').css.left >= '90%') {
 			$('#run').css.left = '90%';
 		}
-	}
-	
+	}	
 }
 //45
 

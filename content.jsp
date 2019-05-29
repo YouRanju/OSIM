@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/contentCss.css?ver=3">
-<script src="js/timecheck.js?ver=16"></script>
+<link rel="stylesheet" href="css/contentCss.css?ver=7">
+<script src="js/timecheck.js?ver=18"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
@@ -18,5 +18,10 @@
 		<img src = "img/zom.png" id="zom">
 		<img src = "img/run.png" id="run">
 	</div>
+	
+	<div id = "distance" style="display:none"><%=session.getAttribute("distance") %></div>
+	
+	<img src = "img/line.jpg" id = "effectImg">
+
 </body>
 </html>

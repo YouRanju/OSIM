@@ -6,7 +6,8 @@
 
 	Calendar cal = Calendar.getInstance();
 	
-	int todayDayOfWeek = cal.get(Calendar.DAY_OF_WEEK)-1;
+	long todayDayOfWeek = cal.getTimeInMillis();
+	long nextMonday = 0, distance = 0;
 
 	if(cal.get(Calendar.DAY_OF_WEEK)-1 == 1) {
 		session.setAttribute("isMon", "true");
@@ -14,6 +15,7 @@
 		session.setAttribute("isMon", "false");
 		
 		cal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+		
 		if(todayDayOfWeek != 0) {
 			cal.add(Calendar.DATE, 7);
 		} 
@@ -23,5 +25,12 @@
 		
 		Time = cal.get(Calendar.DATE);
 		session.setAttribute("thisDate", Time);
+		
+		
+		nextMonday = cal.getTimeInMillis();
+		distance = (nextMonday - todayDayOfWeek);
+		
+		session.setAttribute("distance", distance);
+		
 	}
 %>
