@@ -92,6 +92,7 @@ a {
 	text-decoration: none;
 	color: black;
 	transition: color 0.3s ease;
+	cursor: pointer;
 }
 
 a:hover {

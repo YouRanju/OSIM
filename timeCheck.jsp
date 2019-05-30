@@ -1,10 +1,31 @@
+<%@page import="java.util.TimeZone"%>
 <%@page import="java.util.Calendar"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
 	request.setCharacterEncoding("UTF-8");
 
-	Calendar cal = Calendar.getInstance();
+	String location = "";
+	if(session.getAttribute("location") != null) {
+		location = session.getAttribute("location").toString();
+	} else {
+		location = "Korea";
+	}
+			
+	Calendar cal = null;
+	if(location.equals("Korea")) {
+		cal = Calendar.getInstance(TimeZone.getTimeZone("Asia/Seoul"));
+	} else if (location.equals("England")) {
+		cal = Calendar.getInstance(TimeZone.getTimeZone("Europe/London"));
+		cal.add(Calendar.HOUR, -8);
+	} else if (location.equals("USA")) {
+		cal = Calendar.getInstance(TimeZone.getTimeZone("America/New_York"));
+		cal.add(Calendar.HOUR, -13);
+	} else {
+		cal = Calendar.getInstance(TimeZone.getTimeZone("Australia/Sydney"));
+		cal.add(Calendar.HOUR, 1);
+	}
+	
 	long todayDayOfWeek = cal.getTimeInMillis();
 	long nextMonday = cal.get(Calendar.DAY_OF_WEEK) - 1, nextDay = 0, distance = 0;
 	

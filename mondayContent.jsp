@@ -10,6 +10,7 @@
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body onload="initTime(); monday()">
+<jsp:include page="timeCheck.jsp" />  
 	<div id = "dd">
 		현 재 시 간 | <span id="countdown" style="display:none"><%= session.getAttribute("today") %></span><br>
 		남 은 시 간 | <span id="endTime"></span>
