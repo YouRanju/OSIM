@@ -18,19 +18,13 @@
 			</fieldset>
 		</form>
 	</div>
-	<% 
-	String se_name = "";
-String se_value = "";
-Enumeration enum_01 = session.getAttributeNames(); 
-int i = 0;
-while(enum_01.hasMoreElements()) {
- i++; 
-
-  se_name = enum_01.nextElement().toString(); 
-  se_value = session.getAttribute(se_name).toString();
-  
-  out.println("<br>얻어온 세션 이름 [" + i + "] : " + se_name + "<br>");
-  out.println("<br>얻어온 세션 값 [" + i + "] : " + se_value + "<hr>");
-}%>
+	<%
+		if(session.getAttribute("newname") != null) {
+			out.println("남아있는 로그인 값 : " + session.getAttribute("newname") + "/" 
+						+ session.getAttribute("newpwd") + "/" 
+						+ session.getAttribute("newlocation")
+						);
+		}
+	%>				
 </body>
 </html>

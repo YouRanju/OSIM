@@ -5,7 +5,6 @@
 	String name = request.getParameter("name");
 	String pwd = request.getParameter("pwd");
 	
-	
 	if(session.getAttribute("newname") != null) {
 		if(name.equals(session.getAttribute("newname")) && pwd.equals(session.getAttribute("newpwd"))) {
 			session.setAttribute("location", session.getAttribute("newlocation"));

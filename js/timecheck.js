@@ -16,11 +16,11 @@ function initTime() {
 		+ (date.getHours()%12) + ' : ' 
 		+ date.getMinutes() + ' : ' 
 		+ date.getSeconds();
+	hours = date.getHours();
 	element.innerHTML += (hours-12) >= 0 ? ' [PM]' : ' [AM]';
 	webDate = date;
 	$('#countdown').fadeIn();
 
-	hours = date.getHours();
 	backgroundChange();
 
 	setInterval(updateTimer, 1000);
@@ -37,15 +37,16 @@ function timeChecking() {
 	seconds = date.getSeconds();
 
 	backgroundChange();
-
-	if(webDate.getDate() != dad) {
-		window.location.reload();
+	
+	if(webDate.getDay() != day) {
+		setTimeout(function() { document.location.reload(); }, 1000);
 	}
 
 	webDate = date;
 }
 
-function updateTimer(){		
+function updateTimer(){	
+	
 	timeChecking();
 
 	element.innerHTML = (month+1) + '월 ' + dad + '일 ' + week[day] + '요일 ' + (hours%12) + ' : ' + minutes + ' : ' + seconds;

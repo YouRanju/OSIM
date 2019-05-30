@@ -41,7 +41,7 @@
 
 		nextDay = cal.getTimeInMillis();
 		distance = nextDay;
-		session.setAttribute("distance", distance);	
+		session.setAttribute("distance", distance);
 		
 	} else {
 		session.setAttribute("isMon", "false");

@@ -5,7 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>OSIM</title>
+<link rel="stylesheet" href="css/contentCss.css?ver=2.3">
 <link rel="stylesheet" href = "css/reset.css?ver=1">
+
+<script src="js/timecheck.js?ver=2.7"></script>
+<script src="js/monday.js?ver=2.9.5"></script>
+<script src="js/otherday.js?ver=1.9.2"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
 </head>
 <body>
 <%

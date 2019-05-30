@@ -2,11 +2,13 @@ function monday() {
 	element = document.getElementById("countdown");
 	endElement = document.getElementById("endTime");
 	distance = document.getElementById("distance");
+	
+	setInterval(endTime, 1000);
+	
+	element.innerHTML = "Oh, SXXT!! It's Monday!";
 
 	nextday = distance.innerHTML;
 	disting();
-
-	setInterval(endTime, 1000);
 
 	OneHourleft = (3.67 * date.getHours()) + (3.67 / 60 * date.getMinutes()) + (3.67 / 60 / 60 * date.getSeconds());
 
