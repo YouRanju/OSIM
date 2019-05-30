@@ -8,7 +8,7 @@ body { position: relative; }
 #howMany { height: 200px; background-color: pink;}
 #zom { position: absolute; bottom:50px; width: 120px; z-index:999}
 #run { position: absolute; bottom:50px; width: 120px; z-index:999}
-#distance { position: absolute; bottom:50px; width: 150px;}
+#distance { position: absolute; bottom:50px; width: 300px; font-size: 20px;}
 #effectImg { position: absolute; top: 84px; left: 0; width: 100%; height:840px;
 	opacity: 0.06;}
 

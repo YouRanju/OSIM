@@ -49,16 +49,6 @@ function updateTimer(){
 
 	element.innerHTML = (month+1) + '월 ' + dad + '일 ' + week[day] + '요일 ' + (hours%12) + ' : ' + minutes + ' : ' + seconds;
 	element.innerHTML += (hours-12) >= 0 ? ' [PM]' : ' [AM]'; 
-	
-	dist = $('#zom').css('right').replace('px', '') - $('#run').css('right').replace('px', '');
-	
-	if(dist < 150) {
-		$('#distance').animate({right: '300px'} );
-	} else {
-		$('#distance').animate({right: ((dist/2)+distance.style.width.replace('px', ''))+'px'} );
-	}
-	
-	$('#distance').fadeIn(100);
 }
 
 function backgroundChange() {	

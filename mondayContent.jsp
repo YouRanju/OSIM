@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/contentCss.css?ver=10">
-<script src="js/monday.js?ver=18"></script>
-<script src="js/timecheck.js?ver=13"></script>
+<link rel="stylesheet" href="css/contentCss.css?ver=11">
+<script src="js/monday.js?ver=2.9.3"></script>
+<script src="js/timecheck.js?ver=14"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body onload="initTime(); monday()">
@@ -18,7 +18,7 @@
 		<img src = "img/zom.png" id="zom">
 		<img src = "img/run.png" id="run">
 		<span id="youInfo"><%=session.getAttribute("thisMonth")%>/<%=session.getAttribute("thisDate")%> YOU</span>
-		<span id="target">NEXT TARGET</span>
+		<span id="target">NEXT DAY</span>
 	</div>
 	<div id = "distance" style="display:none"><%=session.getAttribute("distance") %></div>
 </body>

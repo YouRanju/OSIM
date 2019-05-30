@@ -1,54 +1,55 @@
-window.onload = init;
-
-function init() {
+function otherday() {
 	element = document.getElementById("countdown");
+	distance = document.getElementById("distance");
 	
-	date = new Date(Number.parseInt(element.innerHTML));
-
-	setInterval(endTime, 1000);
+	nextMon = distance.innerHTML;
 	
-	setPosition();
-	setInterval(runLeft, 10000);
-	distance.innerHTML = (distance.innerHTML.replace('KM', '') - today) + " KM";
-}
-
-function setPosition() {
-	timeChecking();	
-		
+	day = date.getDay();
 	day = day == 0 ? 6 : day-1;
+
+	OneDayleft = ((12.57 * day) + (12.57 / 24 * date.getHours()) + 
+			(12.57 / 24 / 60 * date.getMinutes()) + (12.57 /24 / 60 / 60 * date.getSeconds()));
 	
-	OneDayleft = 100 - ((14.28 * day) + (14.28 / 24 * hours) + 
-			(14.28 / 24 / 60 * minutes) + (14.28 / 24 / 60 / 60 * seconds));
+	OneDayleft = OneDayleft < 2 ? 2 : OneDayleft;
 	
-	$('#run').animate({left: OneDayleft+"%"});	
+	$('#zom').animate({left: OneDayleft+'%'});
+	$('#youInfo').animate({left: (OneDayleft-1) + '%'});
+	
+	$('#run').css('left', "90%");
+	$('#target').css('left', '90%');
+	
+	setInterval(runright, 10000);
+	setInterval(disted, 1000);
+	setInterval(shake, 1);
 }
 
-if(day != 1 && run.style.left.replace('%','') <= OneDayleft+20) {
+function runright() {
+	$('#zom').animate({right:('+=0.000136%')});
+}
+
+function disted() {
+	today = date.getTime();
+	
+	distance.innerHTML = '남은거리 : ' + ( Math.floor(((nextMon - today)/ 1000)/10000) + '.' + ((nextMon - today) / 1000)%10000 ) + " KM";
+	
 	dist = $('#run').css('left').replace('px', '') - $('#zom').css('left').replace('px', '');
 	
-	if(dist < 150) {
-		$('#distance').animate({left: '300px'} );
+	if(dist < 500) {
+		$('#distance').css('left', (Number.parseInt($('#zom').css('left').replace('px', '')) - 300)+ 'px' );
 	} else {
-		$('#distance').animate({left: ((dist/2)-distance.style.width.replace('px', ''))+'px'} );
+		$('#distance').animate({right: ((dist/2)+distance.style.width.replace('px', ''))+'px'} );
 	}
 	
 	$('#distance').fadeIn(100);
 }
 
-function runLeft() {
-	if(day != 1) {
-		$('#run').animate({left:('-=0.002%')});
-		
-		if($('#run').css.left <= '2%') {
-			$('#run').css.left = '2%';
-		}
-		
-	} else {
-		$('#run').animate({left:('+=0.0011%')});
-		
-		if($('#run').css.left >= '90%') {
-			$('#run').css.left = '90%';
-		}
-	}	
+var flag = 0.4;
+
+function shake() {
+	flag = flag * -1;
+	
+	$('#run').animate({left:('+=' +flag+'%')});
+	$('#run').animate({top:('+=' +flag+'%')});
+	$('#zom').animate({left:('+=' +flag+'%')});
+	$('#zom').animate({top:('+=' +flag+'%')});
 }
-//45
