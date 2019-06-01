@@ -5,14 +5,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/contentCss.css?ver=2.3">
+<script>
+	function imgSrc() 
+		{
+		 <% if( session.getAttribute("name")!= null) { %>
+			document.getElementById("national").src = "<%= "img/" + session.getAttribute("location").toString() + ".png" %>";
+			<% } %>
+		}
+</script>
 </head>
-<body onload="initTime(); otherday()" class="mainbody">
+<body onload="initTime(); otherday(); imgSrc();" class="mainbody">
 <jsp:include page="timeCheck.jsp" />  
 	<div id="dd">
+		<img id = "national" src="img/Korea.png" alt="">
 		현 재 시 간 | <span id="countdown" style="display: none"><%=session.getAttribute("today")%></span>
 		<br> 다음 월요일 | <span><%=session.getAttribute("thisMonth")%>월
 			<%=session.getAttribute("thisDate")%>일</span>
+		<span id="message">
+			<%= session.getAttribute("mondayList") %>
+		</span>
 	</div>
 
 	<div id="howMany">
@@ -27,10 +38,12 @@
 				<%=session.getAttribute("name")%>
 			<%}%>
 		</span> <span id="youInfo">MONDAY</span>
+		
+		<div id="distance" style="display: none"><%=session.getAttribute("distance")%></div>
+		
 	</div>
 
-	<div id="distance" style="display: none"><%=session.getAttribute("distance")%></div>
-
+	
 	<img src="img/line.jpg" id="effectImg">
 </body>
 </html>

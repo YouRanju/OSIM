@@ -19,10 +19,14 @@
 					<input type="submit" value="절규" style="border:0; width: 5%; padding: 4px; margin-left: 30px;">
 				</fieldset>
 			</form>
-		<%	}
+ 		<%	}
 			else {
 		%>
-			<div>OPEN TIME : NEXT MONDAY (<%=session.getAttribute("thisMonth") %>월 <%=session.getAttribute("thisDate") %>일)</div>
+			<div>
+				<fieldset style="margin-top: 10px; padding: 12px;">
+					OPEN TIME : NEXT MONDAY (<%=session.getAttribute("thisMonth") %>월 <%=session.getAttribute("thisDate") %>일)
+				</fieldset>		
+			</div>
 		<%	}
 		%>
 	</div>

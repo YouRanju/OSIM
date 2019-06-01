@@ -5,11 +5,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/inputCss.css?ver=1.3">
+<link rel="stylesheet" href="css/inputCss.css?ver=1.5">
 </head>
 <body>
 	<div id="form"></div>
-	<form action="signinProg.jsp" method="POST">
+	<form action="signinProg.jsp" method="POST" class="sform">
 		<fieldset>
 			<legend>Sign In</legend>
 			<label>이름</label><br> <input type="text" name="name" id="name"
