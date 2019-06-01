@@ -17,11 +17,6 @@
 		현 재 시 간 | <span id="countdown" style="display: none"><%=session.getAttribute("today")%></span> <br> 
 		다음 월요일 | <span id="nextMon"><%=session.getAttribute("thisMonth")%>월
 			<%=session.getAttribute("thisDate")%>일</span>
-		<span id="message">
-			<% if(session.getAttribute("mondayList") != null) {%>
-				<%= session.getAttribute("mondayList") %>
-			<%}%>
-		</span>
 	</div>
 
 	<div id="howMany">

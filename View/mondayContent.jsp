@@ -7,7 +7,7 @@
 			function imgSrc() 
 				{
 				 <% if( session.getAttribute("name")!= null) { %>
-					document.getElementById("national").src = "<%= "img/" + session.getAttribute("location").toString() + ".png?ver=1" %>";
+					document.getElementById("national").src = "<%= "../View/img/" + session.getAttribute("location").toString() + ".png?ver=1" %>";
 					<% } %>
 				}
 		</script>
