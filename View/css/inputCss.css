@@ -1,0 +1,65 @@
+#form {
+	background-image: url('../img/mondaylike.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50%, 100%;
+	opacity: 0.4;
+	height: 770px;
+}
+
+#form1 {
+	height: 790px;
+}
+
+.sform {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-250px, -250px);
+	width: 500px;
+	height: 400px;
+	font-size: 20px;
+}
+
+#setting {
+	left: 30%;
+	transform: translate(-250px, -200px);
+}
+
+#reset {
+	left: 70%;
+	transform: translate(-250px, -200px);
+}
+
+.sform fieldset {
+	height: 400px;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding: 30px;
+	padding-top: 50px
+}
+
+.sform legend {
+	font-size: 30px;
+	margin-left: 20px;
+}
+
+.sform input {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	width: 100%;
+	font-size: 18px;
+	padding: 4px;
+}
+
+.sform input[type="submit"] {
+	margin-top: 50px;
+	padding: 15px;
+	border: 0;
+}
+
+.sform select {
+	margin-top: 10px;
+	width: 100%;
+	font-size: 18px;
+	padding: 4px;
+}

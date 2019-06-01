@@ -1,0 +1,6 @@
+#messageView { display:inline-block; width: 400px; height: 350px; 
+		padding: 10px; font-size: 16px; color:black;
+		overflow-y: auto; border-radius : 5px;
+		background-color: #D2D2D2; z-index: 0}
+#messageView hr { border: 1px solid #F2F2F2; margin-top: 2px; margin-bottom: 7px;}
+#messageView .exception { line-height: 350px; font-size: 32px; }

@@ -44,5 +44,5 @@
 			writer.close();
 		}
 		
-		response.sendRedirect("mondayMessageProg.jsp");
+		response.sendRedirect("main.jsp");
 %>

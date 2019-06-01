@@ -11,7 +11,7 @@
 			session.setAttribute("name", name);
 			session.setAttribute("pwd", pwd);
 			
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("../Control/main.jsp");
 		} else if(name.equals(session.getAttribute("name"))) {
 			out.println("<script>alert('비밀번호를 잘못 입력하셨습니다.');history.back();</script>");
 		} else {
@@ -23,7 +23,7 @@
 			session.setAttribute("name", name);
 			session.setAttribute("pwd", pwd);
 			
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("../Control/main.jsp");
 		} else if(name.equals("홍길동")) {
 			out.println("<script>alert('비밀번호를 잘못 입력하셨습니다.');history.back();</script>");
 		} else {

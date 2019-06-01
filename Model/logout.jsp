@@ -6,5 +6,5 @@
 	session.removeAttribute("name");
 	session.removeAttribute("pwd");
 	
-	response.sendRedirect("main.jsp");
+	response.sendRedirect("../Control/main.jsp");
 %>

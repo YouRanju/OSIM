@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/inputCss.css?ver=1.5">
-<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href="../View/css/inputCss.css?ver=1.5">
 <script>
 	window.onload = function() {$("#location").val("<%=session.getAttribute("location")%>");
 	}
@@ -13,7 +12,7 @@
 </head>
 <body>
 	<div id="form1">
-		<form action="settingProg.jsp" method="POST" id="setting"
+		<form action="../Model/settingProg.jsp" method="POST" id="setting"
 			class="sform">
 			<fieldset>
 				<legend>Setting</legend>
@@ -29,7 +28,7 @@
 				</select> <input type="submit" value="수정하기">
 			</fieldset>
 		</form>
-		<form action="reset.jsp" method="POST" id="reset" class="sform">
+		<form action="../Model/reset.jsp" method="POST" id="reset" class="sform">
 			<fieldset style="text-align: center;">
 				<legend>Reset</legend>
 				<br>

@@ -14,5 +14,5 @@
 	session.setAttribute("name", name);
 	session.setAttribute("pwd", pwd);
 	
-	out.println("<script>alert('수정되었습니다.');document.location.href='main.jsp'</script>");
+	out.println("<script>alert('수정되었습니다.');document.location.href='../Control/main.jsp'</script>");
 %>
