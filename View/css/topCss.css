@@ -1,10 +1,7 @@
-body {
-	overflow: hidden;
-}
-
 h1 {
 	display: inline-block;
 	width: 95%;
+	margin: 20px;
 }
 
 nav {
@@ -14,7 +11,6 @@ nav {
 
 #menuToggle {
 	position: relative;
-	z-index: 1;
 }
 
 #menuToggle input {

@@ -5,7 +5,7 @@
 	padding: 20px;
 }
 
-#dd span {
+#dd #countdown, #dd #endTime, #dd #nextMon {
 	font-size: 64px;
 	margin: 20px;
 	padding: 10px;
@@ -93,11 +93,11 @@
 }
 
 #message {
-	position: absolute; top: 0; left: 0;
+	position: absolute; top: 20%; left: 55%; z-index: 99999;
 }
 
 #national {
-	position: absolute; top: 0; left: 0;
-	width: 980px; height:980px;
-	border: 0;
+	position: absolute; top: 30%; left: 0;
+	width: 55%;
+	border: 0; z-index:50;
 }
