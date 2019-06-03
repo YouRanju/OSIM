@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/contentCss.css?ver=2.3">
 </head>
-<body onload="initTime(); otherday()">
+<body onload="initTime(); otherday()" class="mainbody">
 <jsp:include page="timeCheck.jsp" />  
 	<div id="dd">
 		현 재 시 간 | <span id="countdown" style="display: none"><%=session.getAttribute("today")%></span>

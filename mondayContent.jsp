@@ -3,13 +3,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 </head>
-<body onload="initTime(); monday()">
-<jsp:include page="timeCheck.jsp" />  
+<body onload="initTime(); monday()" class="mainbody">
+<jsp:include page="timeCheck.jsp" />
+<jsp:include page="mondayMessageProg.jsp" />
+
 	<div id = "dd">
 		현 재 시 간 | <span id="countdown" style="display:none"><%= session.getAttribute("today") %></span><br>
 		남 은 시 간 | <span id="endTime"></span>
+		<span style="display:none" id="message">
+			<%= session.getAttribute("mondayList") %>
+		</span>
 	</div>
 	<div id = "howMany">
 		<img src = "img/zom.png" id="zom">
