@@ -15,8 +15,8 @@
 					<legend>OH, SHIT. IT'S MONDAY</legend>
 					<label><%=session.getAttribute("thisMonth") %>월 <%=session.getAttribute("thisDate") %>일의 절규</label>
 					<input type="text" name="osim" id="name" placeholder="살려줘..."
-					 style="margin-left: 20px; padding: 2px; width: 85%; z-index:9999;"">
-					<input type="submit" value="절규" style="border:0; width: 5%; padding: 4px; margin-left: 30px;">
+					 style="margin-left: 20px; padding: 2px; width: 75%; z-index:9999;"">
+					<input type="submit" value="절규" style="border:0; width: 8%; padding: 4px; margin-left: 30px;">
 				</fieldset>
 			</form>
  		<%	}

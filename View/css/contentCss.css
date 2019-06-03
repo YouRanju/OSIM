@@ -1,49 +1,49 @@
 #dd {
 	position:relative;
-	height: 550px;
+	height: 20em;
 	color: red;
 	padding: 20px;
 }
 
 #dd #countdown, #dd #endTime, #dd #nextMon {
-	font-size: 64px;
+	font-size: 40px;
 	margin: 20px;
 	padding: 10px;
 }
 
 #howMany {
 	position:relative;
-	height: 200px;
+	height: 8em;
 	background-color: pink;
 }
 
 #zom {
 	position: absolute;
 	bottom: 50px;
-	width: 120px;
-	z-index: 999
+	width: 8%;
+	z-index: 9999
 }
 
 #run {
 	position: absolute;
 	bottom: 50px;
-	width: 120px;
-	z-index: 999
+	width:8%;
+	z-index: 9999
 }
 
 #distance {
 	position: absolute;
 	bottom: 50px;
-	width: 300px;
-	font-size: 20px;
+	width: 150px;
+	font-size: 14px;
 }
 
 #effectImg {
 	position: absolute;
-	top: 84px;
+	top: 10%;
 	left: 0;
 	width: 100%;
-	height: 790px;
+	height: 520px;
 	opacity: 0.06;
 }
 
@@ -52,7 +52,7 @@
 	bottom: 10px;
 	display: inline-block;
 	padding: 5px;
-	width: 120px;
+	width: 10%;
 	text-align: center;
 	color: white;
 	background-color: #cf7756;
@@ -75,7 +75,7 @@
 	left: 90%;
 	display: inline-block;
 	padding: 5px;
-	width: 120px;
+	width: 10%;
 	text-align: center;
 	color: white;
 	background-color: #f3326c;
@@ -93,11 +93,20 @@
 }
 
 #message {
-	position: absolute; top: 20%; left: 55%; z-index: 99999;
+	position: absolute; top: 22%; left: 70%; z-index: 99999;
 }
 
 #national {
-	position: absolute; top: 30%; left: 0;
+	position: absolute; top: 40%; left: 0;
 	width: 55%;
-	border: 0; z-index:50;
+	border: 0; z-index:40;
+}
+
+@media (width: 1920px ){
+	#dd { height: 520px;}
+	#howMany { height: 240px;}
+	#target, #youInfo { width: 120px;}
+	#national { top:26%; }
+	#message { top: 30%; left: 70%; }
+	#effectImg {top: 68px; height: 780px; }
 }

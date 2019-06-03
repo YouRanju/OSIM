@@ -3,5 +3,5 @@
 <%
 	session.invalidate();
 	
-	response.sendRedirect("main.jsp");
+	response.sendRedirect("../Control/main.jsp");
 %>

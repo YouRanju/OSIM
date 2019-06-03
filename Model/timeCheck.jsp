@@ -1,3 +1,5 @@
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.TimeZone"%>
 <%@page import="java.util.Calendar"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -18,6 +20,7 @@
 	} else if (location.equals("England")) {
 		cal = Calendar.getInstance(TimeZone.getTimeZone("Europe/London"));
 		cal.add(Calendar.HOUR, -8);
+		
 	} else if (location.equals("USA")) {
 		cal = Calendar.getInstance(TimeZone.getTimeZone("America/New_York"));
 		cal.add(Calendar.HOUR, -13);
@@ -29,7 +32,13 @@
 	long todayDayOfWeek = cal.getTimeInMillis();
 	long nextMonday = cal.get(Calendar.DAY_OF_WEEK) - 1, nextDay = 0, distance = 0;
 	
-	if(cal.get(Calendar.DAY_OF_WEEK)-1 == 1) {
+	Date dt = new Date(todayDayOfWeek);
+	SimpleDateFormat fd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	session.setAttribute("day", fd.format(dt));
+	
+	
+	if(dt.getDay() == 1) {
+		
 		session.setAttribute("isMon", "true");
 		
 		int Time = cal.get(Calendar.MONTH);

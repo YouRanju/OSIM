@@ -4,20 +4,20 @@
 	background-size: contain;
 	background-position: 50%, 100%;
 	opacity: 0.4;
-	height: 770px;
+	height: 480px;
 }
 
 #form1 {
-	height: 790px;
+	height: 480px;
 }
 
 .sform {
 	position: fixed;
 	left: 50%;
 	top: 50%;
-	transform: translate(-250px, -250px);
-	width: 500px;
-	height: 400px;
+	transform: translate(-10em, -10em);
+	width: 20em;
+	height: 5em;
 	font-size: 20px;
 }
 
@@ -27,15 +27,15 @@
 }
 
 #reset {
-	left: 70%;
+	left: 75%;
 	transform: translate(-250px, -200px);
 }
 
 .sform fieldset {
-	height: 400px;
+	height: 15em;
 	background-color: rgba(255, 255, 255, 0.9);
 	padding: 30px;
-	padding-top: 50px
+	padding-top: 40px
 }
 
 .sform legend {
@@ -45,14 +45,14 @@
 
 .sform input {
 	margin-top: 10px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	width: 100%;
-	font-size: 18px;
+	font-size: 14px;
 	padding: 4px;
 }
 
 .sform input[type="submit"] {
-	margin-top: 50px;
+	margin-top: 25px;
 	padding: 15px;
 	border: 0;
 }
@@ -62,4 +62,11 @@
 	width: 100%;
 	font-size: 18px;
 	padding: 4px;
+}
+
+@media (width: 1920px) {
+	#form, #form1 { height: 780px; }
+	.sform { width: 22em; top: 45%; }
+	.sform fieldset { height: 18em; }
+	#reset { left: 70%; }
 }

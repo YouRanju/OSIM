@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="../View/css/inputCss.css?ver=1.5">
+		<link rel="stylesheet" href="../View/css/inputCss.css?ver=1.6">
 	</head>
 	<body>
 		<div id="form"></div>

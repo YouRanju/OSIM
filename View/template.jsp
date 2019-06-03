@@ -7,13 +7,13 @@
 		<title>OSIM</title>
 		
 		<!-- css -->
-		<link rel="stylesheet" href="../View/css/contentCss.css?ver=2.9.2">
+		<link rel="stylesheet" href="../View/css/contentCss.css?ver=2.9.4">
 		<link rel="stylesheet" href="../View/css/reset.css?ver=1">
 
 		<!-- script -->
-		<script src="../js/timecheck.js?ver=2.7"></script> <!-- 현재시간  -->
-		<script src="../js/monday.js?ver=2.9.5"></script> 	<!-- 월요일 이벤트  -->
-		<script src="../js/otherday.js?ver=1.9.2"></script> <!-- 나머지 이벤트  -->
+		<script src="../View/js/timecheck.js?ver=2.7"></script> <!-- 현재시간  -->
+		<script src="../View/js/monday.js?ver=2.9.5"></script> 	<!-- 월요일 이벤트  -->
+		<script src="../View/js/otherday.js?ver=1.9.2"></script> <!-- 나머지 이벤트  -->
 		
 		<!-- jquery -->
 		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
