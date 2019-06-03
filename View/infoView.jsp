@@ -3,14 +3,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="../css/infoCss.css?ver=1.4">
+		<link rel="stylesheet" href="../View/css/infoCss.css?ver=1.5">
 	</head>
 	<body>
 		<div id="container">
 			<div id="summ">
 				<br>
 				<h2>OSIM이란?</h2> <br><br>
-				<img src="../View/img/dic.PNG"> <br>
+				<img src="../View/img/dic.PNG" width="70%"> <br>
 				<div style="margin-top: 10px;">'Oh, Shit. It's Monday.'라는 채팅
 					약어로 월요일에 고통받는 사람들의 절규소리입니다.</div>
 				<br>

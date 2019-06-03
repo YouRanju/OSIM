@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="../View/css/boardCss.css?ver=1">
+	<link rel="stylesheet" href="../View/css/boardCss.css?ver=1.1">
 </head>
 <body>
 	<span id="messageView">

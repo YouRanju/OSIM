@@ -13,7 +13,7 @@ function initTime() {
 	element.innerHTML = (date.getMonth()+1) + '월 ' 
 		+ date.getDate() + '일 ' 
 		+ week[date.getDay()] + '요일 ' 
-		+ (date.getHours()%12) + ' : ' 
+		+ (((date.getHours())-13>=0) ? ((date.getHours())%12) : (date.getHours()))+ ' : ' 
 		+ date.getMinutes() + ' : ' 
 		+ date.getSeconds();
 	hours = date.getHours();
@@ -49,7 +49,7 @@ function updateTimer(){
 	
 	timeChecking();
 
-	element.innerHTML = (month+1) + '월 ' + dad + '일 ' + week[day] + '요일 ' + (hours%12) + ' : ' + minutes + ' : ' + seconds;
+	element.innerHTML = (month+1) + '월 ' + dad + '일 ' + week[day] + '요일 ' + ((hours-13>=0) ? (hours%12) : (hours)) + ' : ' + minutes + ' : ' + seconds;
 	element.innerHTML += (hours-12) >= 0 ? ' [PM]' : ' [AM]'; 
 }
 

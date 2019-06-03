@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../View/css/inputCss.css?ver=1.5">
+<link rel="stylesheet" href="../View/css/inputCss.css?ver=1.6">
 <script>
 	window.onload = function() {$("#location").val("<%=session.getAttribute("location")%>");
 	}
