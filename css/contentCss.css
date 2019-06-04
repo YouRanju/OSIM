@@ -1,13 +1,35 @@
-* { margin: 0; padding: 0;}
+@import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+
+* { margin: 0; padding: 0; font-family: 'Jua', sans-serif;}
 body { position: relative; }
-#dd { height: 640px;
-	 background: linear-gradient(to top, #304A69, #203954, #19282D 20%, #060315 40%);
-	 color : red;}
+#dd { height: 640px; color : red; padding: 20px;}
+#dd span { font-size: 64px;
+	margin: 20px; padding: 10px; }
 #howMany { height: 200px; background-color: pink;}
-#zom { position: absolute; bottom:50px; left: 2%; width: 100px; z-index:999}
-#run { position: absolute; bottom:50px; left: 90%; width: 100px; z-index:999}
-
+#zom { position: absolute; bottom:50px; width: 120px; z-index:999}
+#run { position: absolute; bottom:50px; width: 120px; z-index:999}
 #distance { position: absolute; bottom:50px; width: 150px;}
-
-#effectImg { position: fixed; top: 84px; left: 0; width: 100%; height:840px;
+#effectImg { position: absolute; top: 84px; left: 0; width: 100%; height:840px;
 	opacity: 0.06;}
+
+#youInfo { position: absolute; bottom: 10px;
+	display: inline-block; padding: 5px; width: 120px;
+	text-align: center; color: white;
+	background-color: #cf7756; }
+#youInfo:before { content: ''; position: absolute; left: 40%; bottom: 30px; 
+    margin-left: -7px;
+    border-bottom: 10px solid #cf7756;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+#target { position: absolute; bottom: 10px; left: 90%;
+	display: inline-block; padding: 5px; width: 120px;
+	text-align: center; color: white;
+	background-color: #f3326c;}
+#target:before { content: ''; position: absolute; left: 40%; bottom: 30px; 
+    margin-left: -7px;
+    border-bottom: 10px solid #f3326c;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}

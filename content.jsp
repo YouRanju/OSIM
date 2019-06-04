@@ -5,12 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/contentCss.css?ver=7">
-<script src="js/timecheck.js?ver=18"></script>
+<script src="js/timecheck.js?ver=22"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
 	<div id = "dd">
-		현 재 시 간  | <span id="countdown"></span> <br>
+		현 재 시 간  | <span id="countdown" style="display:none"><%= session.getAttribute("today") %></span> <br>
 		다음 월요일 |  <%= session.getAttribute("thisMonth") %>월 <%= session.getAttribute("thisDate") %>일
 	</div>
 

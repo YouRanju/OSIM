@@ -1,7 +1,9 @@
 <%@page import="java.util.Calendar"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+  
+<jsp:include page="timeCheck.jsp" />  
+
 <%
 	request.setCharacterEncoding("UTF-8");
 	String isMonday = "";
@@ -12,7 +14,6 @@
 		isMonday = "content.jsp";
 	}
 %>
-<jsp:include page="timeCheck.jsp" />
 
 <jsp:forward page="template.jsp">
 	<jsp:param value="<%=isMonday %>" name="CONTENTPAGE"/>
