@@ -1,0 +1,14 @@
+#container {
+	background-color : #F0F0F0;
+	height: 790px;
+	padding-left : 30px;
+}
+
+#container div { font-size: 17px;}
+
+h2 { display: inline-block; margin: 10px; }
+
+#summ { display: inline-block; box-sizing: border-box; width: 48%;}
+#use { display: inline-block; box-sizing: border-box; width: 48%; height:493px; vertical-align:top}
+
+hr { margin-top: 150px; margin-bottom : 10px; }

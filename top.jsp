@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href = "css/topCss.css?ver=1">
 <style>
 	h1 { margin: 20px;}
 </style>
@@ -24,5 +25,23 @@
 %>
 
 	<h1><%=isMonday%></h1>
+
+	<nav role="navigation">
+		<div id="menuToggle">
+			<input type="checkbox" /> 
+			
+			<span></span> 
+			<span></span> 
+			<span></span>
+
+			<ul id="menu">
+				<a href="main.jsp"><li>MAIN</li></a>
+				<a href="information.jsp"><li>INFO</li></a>
+				<a href="#"><li>SIGN IN</li></a>
+				<a href="#"><li>SETTING</li></a>
+				<a href="https://github.com/YouRanju/OSIM" target="_blank"><li>GITHUB</li></a>
+			</ul>
+		</div>
+	</nav>
 </body>
 </html>

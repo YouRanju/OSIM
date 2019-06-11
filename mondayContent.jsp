@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/contentCss.css?ver=11">
+<link rel="stylesheet" href="css/contentCss.css?ver=2.3">
 <script src="js/monday.js?ver=2.9.3"></script>
-<script src="js/timecheck.js?ver=14"></script>
+<script src="js/timecheck.js?ver=2.2"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body onload="initTime(); monday()">
@@ -21,5 +21,6 @@
 		<span id="target">NEXT DAY</span>
 	</div>
 	<div id = "distance" style="display:none"><%=session.getAttribute("distance") %></div>
+	<img src = "img/line.jpg" id = "effectImg">
 </body>
 </html>

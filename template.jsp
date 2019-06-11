@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>OSIM</title>
+<link rel="stylesheet" href = "css/reset.css?ver=1">
 </head>
 <body>
 <%
@@ -18,8 +19,9 @@
 				<jsp:include page = "top.jsp" flush = "false" />
 			</td>
 		</tr>
+		
 		<tr>
-			<td width = "600" valign="top">
+			<td valign="top">
 				<jsp:include page = "<%=contentPage %>" flush = "false" />
 			</td>
 		</tr>

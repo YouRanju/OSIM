@@ -8,7 +8,7 @@ function initTime() {
 	element = document.getElementById("countdown");
 	run = document.getElementById("run");
 	dd = document.getElementById("dd");
-	
+
 	date = new Date(Number.parseInt(element.innerHTML));	
 	element.innerHTML = (date.getMonth()+1) + '월 ' 
 		+ date.getDate() + '일 ' 
@@ -16,18 +16,19 @@ function initTime() {
 		+ (date.getHours()%12) + ' : ' 
 		+ date.getMinutes() + ' : ' 
 		+ date.getSeconds();
+	element.innerHTML += (hours-12) >= 0 ? ' [PM]' : ' [AM]';
 	webDate = date;
 	$('#countdown').fadeIn();
-	
+
 	hours = date.getHours();
 	backgroundChange();
-	
+
 	setInterval(updateTimer, 1000);
 }
 
 function timeChecking() {
 	date = new Date(webDate.getTime() + 1000);
-	
+
 	month = date.getMonth();
 	dad = date.getDate();
 	day = date.getDay();
@@ -36,11 +37,11 @@ function timeChecking() {
 	seconds = date.getSeconds();
 
 	backgroundChange();
-	
+
 	if(webDate.getDate() != dad) {
 		window.location.reload();
 	}
-	
+
 	webDate = date;
 }
 

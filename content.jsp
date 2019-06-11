@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/contentCss.css?ver=2.2">
-<script src="js/timecheck.js?ver=2.1"></script>
+<link rel="stylesheet" href="css/contentCss.css?ver=2.3">
+<script src="js/timecheck.js?ver=2.2"></script>
 <script src="js/otherday.js?ver=1.9.2"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
